@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(140deg, rgb(107, 1, 107) 30%, rgb(1, 1, 133), rgb(0, 0, 35));
+  color: rgb(0, 0, 0);
+  height: 100vh;
+}
+
+.blogsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 40px;
+  padding: 20px 0 20px 0;
+}
+
+.blogsContainer:hover {
+  box-shadow: 1px 1px 3px black;
+  border: none;
+}
+
+.blogsContainer h2 {
+  color: rgb(255, 0, 212);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.listContainer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogsContainer a {
+  text-decoration: none;
+}
+
+.blogDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 50px;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.005);
+  min-height: 500px;
+}
+
+.blogDetails h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+.blogDetails p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blogDetails .delete {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  background-color: red;
+  color: rgb(184, 184, 184);
+  border: none;
+  border-radius: 10px;  
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.notFound h2 {
+  color: red;
+  font-size: xx-large;
+  margin-bottom: 50px;
+}
+
+.notFound p {
+  font-weight: 600;
+  margin: 20px
+}
+
+.notFound button {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input,
+textarea,
+select {
+  background-color: rgba(240, 248, 255, 0.338);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
