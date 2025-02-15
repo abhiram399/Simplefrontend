@@ -1,0 +1,956 @@
+:root {
+	--color: rgb(178, 34, 34);
+	--color-2: rgb(255, 250, 240);
+	--color-dark: rgb(145, 25, 25);
+	--bg-color: rgb(252, 240, 214);
+}
+
+@keyframes car {
+	0% {
+		transform: translate(-3px, -3px);
+	}
+
+	40% {
+		transform: translate(0px, 0px);
+		/* Add slight overshoot */
+	}
+
+	100% {
+		transform: translate(-3px, -3px);
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0px 50px;
+	background-color: var(--bg-color);
+	color: var(--color);
+	font-family: Antonio;
+	overflow-x: hidden;
+}
+
+a {
+	color: var(--color);
+	text-decoration: none;
+	position: relative;
+	/* display: inline; */
+}
+
+
+
+.logoContainer {
+	width: 70%;
+	height: 100px;
+}
+
+.logoContainer .logo {
+	height: 100px;
+	width: 200px;
+}
+
+.logoContainer img {
+	width: 150px;
+}
+
+nav {
+	position: relative;
+	margin-top: 30px;
+	display: flex;
+	height: 150px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 999;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: right;
+	margin-top: 20px;
+	gap: 10px;
+}
+.links a:hover{
+	transition: .5s;
+	/* transition-delay: .2s; */
+	scale: 1.1;
+	color: rgb(208, 3, 3);
+}
+
+nav .home {
+	margin-top: 50px;
+	font-weight: bold;
+	margin-right: 50px;
+}
+
+.second-logo {
+	filter: grayscale(1);
+}
+
+/* page style starts here */
+
+.sec-01 {
+	display: flex;
+	margin-top: 2.sec-01 0px;
+	border-bottom: 1px solid var(--color);
+	height: 80vh;
+}
+
+.sec-01 .wrapper-01 {
+	width: 50%;
+}
+
+.sec-01 .wrapper-02 {
+	width: 50%;
+	/* background-color: aliceblue; */
+	position: relative;
+}
+
+.sec-01 .wrapper-02 img {
+	top: -100px;
+	position: absolute;
+	width: 150%;
+	animation: car 2s ease-in-out infinite;
+}
+
+.sec-01 .wrapper-01 h1 {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	position: relative;
+	height: fit-content;
+	width: fit-content;
+	font-size: 64px;
+}
+
+.sec-01 .wrapper-01 h1::before {
+	content: '';
+	width: 10px;
+	height: 160px;
+	border-radius: 3px;
+	position: absolute;
+	top: 10px;
+	left: -20px;
+	background-color: var(--color);
+}
+
+.sec-01 .wrapper-01 h1 span {
+	font-family: Outward;
+	font-size: 100px;
+	letter-spacing: 3px;
+	/* color: var(--bg-color); */
+}
+
+.sec-01 .wrapper-01 p {
+	width: 115%;
+	font-size: 1.2em;
+}
+
+.sec-02 {
+	margin-top: 100px;
+}
+
+.sec-02 .wrapper-01 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sec-02 h1 {
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: 100px;
+}
+
+.sec-02 p {
+	text-align: center;
+	width: 90%;
+}
+
+.sec-02 .wrapper-02 {
+	margin-top: 150px;
+	margin-bottom: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sec-02 .wrapper-02 .option {
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.sec-02 .wrapper-02 button {
+	width: 200PX;
+	height: 100PX;
+	font-family: inherit;
+	font-size: 2em;
+	color: inherit;
+	background-color: transparent;
+	border: 1px solid var(--color);
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	transition: .5s;
+}
+
+.sec-02 .wrapper-02 .car::before {
+	content: '';
+	width: 150%;
+	height: 200%;
+	position: absolute;
+	background-color: var(--color);
+	top: 100px;
+	left: 200px;
+	border-radius: 50%;
+	z-index: -1;
+	transition: .5s;
+}
+
+.sec-02 .wrapper-02 .bike::before {
+	content: '';
+	width: 150%;
+	height: 200%;
+	position: absolute;
+	background-color: var(--color);
+	top: 100px;
+	right: 200px;
+	border-radius: 50%;
+	z-index: -1;
+	transition: .5s;
+}
+
+.sec-02 .wrapper-02 button:hover {
+	color: var(--bg-color);
+	/* border: none; */
+}
+
+.sec-02 .wrapper-02 button:hover.car::before {
+	top: 0;
+	left: 0;
+}
+
+.sec-02 .wrapper-02 button:hover.bike::before {
+	top: 0;
+	right: 0;
+}
+
+.sec-02 .cityWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+
+
+.sec-02 .cityContainer {
+	display: flex;
+	justify-content: space-evenly;
+	width: 80%;
+	flex-wrap: wrap;
+	gap: 150px;
+	margin-bottom: 200px;
+}
+
+.sec-02 .cityContainer img {
+	width: 175px;
+}
+
+.cityContainer .imgContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sec-02 .cityContainer .card {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 2px solid var(--color);
+	background-color: transparent;
+	overflow: hidden;
+}
+
+.car-option {
+	display: none;
+}
+
+.bike-option {
+	display: none;
+}
+
+
+.sec-02 .cars {
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+
+.sec-02 .cars .card img {
+	width: 200px;
+	border-bottom: 1px solid red;
+	margin-bottom: 20px;
+}
+
+.sec-02 .car-option .card {
+	background-color: transparent
+}
+
+.cars .cardWrapper {
+	padding: 40px;
+	padding-bottom: 60px;
+	margin: 20px;
+	background-color: rgb(255, 255, 255);
+	height: 400px;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: black;
+	border-radius: 15px;
+	border: .5px solid rgba(151, 2, 2, 0.322);
+}
+
+.price {
+	font-size: 34px;
+	/* Base size for the price text */
+	line-height: 1.5;
+}
+
+.price .priceValue {
+	font-size: 1.2em;
+	/* Increase the size of the rupee symbol */
+	font-weight: bold;
+}
+
+.price .bold {
+	font-weight: bold;
+	/* Bold the price value */
+}
+
+.price .perDay {
+	font-size: 0.7em;
+	/* Make the "/day" text smaller */
+	font-weight: normal;
+	/* Remove boldness */
+	color: grey;
+}
+
+.conditioning-img img,
+.person-img img,
+.fuel-img img {
+	height: 20px;
+	object-fit: contain;
+	/*Ensure the image scales without distortion*/
+	margin-right: 10px;
+}
+
+.fuel,
+.conditioning,
+.person {
+	display: flex;
+	align-items: center;
+}
+
+.detail-wrapper {
+	margin: 10px;
+}
+
+.book-now-btn {
+	background-color: var(--color);
+	/* Primary blue background */
+	color: #fff;
+	/* White text color */
+	border: none;
+	/* Remove default border */
+	padding: 10px 20px;
+	/* Add padding for size */
+	font-size: 16px;
+	/* Font size for better readability */
+	border-radius: 5px;
+	/* Rounded corners */
+	cursor: pointer;
+	/* Pointer cursor on hover */
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	/* Smooth transition effects */
+}
+
+.book-now-btn:hover {
+	background-color: rgb(143, 18, 18);
+	/* Darker blue on hover */
+	transform: scale(1.05);
+	/* Slightly enlarge the button on hover */
+}
+
+.book-now-btn:active {
+	background-color: rgb(178, 34, 34);
+	/* Even darker blue when clicked */
+	transform: scale(0.95);
+	/* Slightly shrink the button when clicked */
+}
+
+
+
+
+
+
+
+
+
+.sec-02 .bikes {
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.sec-02 .bikes .card img {
+	width: 200px;
+	border-bottom: 1px solid var(--color);
+	margin-bottom: 20px;
+}
+
+.sec-02 .bike-option .card {
+	background-color: transparent
+}
+
+.bikes .cardWrapper {
+	padding: 40px;
+	margin-bottom: 60px;
+	margin: 20px;
+	background-color: rgb(255, 255, 255);
+	height: 400px;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: black;
+	border-radius: 15px;
+	border: .5px solid rgba(151, 2, 2, 0.322);
+}
+
+.sec-02 {
+	padding-bottom: 200px;
+	border-bottom: 1px solid var(--color);
+}
+
+.sec-03 .card {
+	width: 500px;
+	min-height: 400px;
+	background-color: floralwhite;
+	border: 1px solid rgb(178, 34, 34);
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	scale: 0.8;
+	transition: .5s;
+	filter: grayscale(1);
+}
+
+.sec-03 .card:nth-of-type(2) {
+	scale: 1;
+	filter: grayscale(0);
+}
+
+.sec-03 .person {
+	width: 200px;
+}
+
+.sec-03 .comment img {
+	width: 50px;
+	position: relative;
+	top: 15px;
+	left: -15px;
+}
+
+.sec-03 .wrapper {
+	display: flex;
+	margin-top: 50px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.sec-03 .img-wrapper {
+	animation: movement 8s infinite ease-in-out;
+}
+
+.sec-03 .comment {
+	width: 55%;
+	animation: movement 8s infinite ease-in-out reverse;
+
+}
+
+.sec-03 .comment .container {
+	display: flex;
+	flex-direction: column;
+	background-color: aqua;
+}
+
+@keyframes movement {
+	0% {
+		transform: translate(0, 0px);
+	}
+
+	25% {
+		transform: translate(3px, -10px);
+	}
+
+	75% {
+		transform: translate(-3px, 10px);
+	}
+
+	100% {
+		transform: translate(0, 0px);
+	}
+
+}
+
+/*   --------    Carousel Code  --------------*/
+
+
+.sec-03 {
+	position: relative;
+	width: 93%;
+	overflow: hidden;
+	margin: 50px;
+}
+
+.carousel-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.carousel {
+	display: flex;
+	gap: 20px;
+	/* Space between cards */
+	width: 100%;
+	/* Adjust to the visible area */
+	position: relative;
+	transition: transform 1s ease-in-out;
+	left: -15vw;
+}
+
+
+.sec-03 .card {
+	min-width: 500px;
+	flex-shrink: 0;
+}
+
+.sec-03 button.prev,
+.sec-03 button.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.sec-03 button.prev {
+	left: 10px;
+}
+
+.sec-03 button.next {
+	right: 10px;
+}
+
+.sec-03 .review {
+	text-align: center;
+	font-size: 40px;
+	margin: 150px;
+}
+
+.main {
+
+	display: flex;
+	justify-content: center;
+}
+
+.main .container {
+	display: block;
+	margin: 0, auto;
+	width: 60%;
+	background-color: white;
+	height: 300px;
+	box-shadow: 0px 0px 5px black;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.main .container::before {
+	content: '';
+	width: 200%;
+	height: 200px;
+	background-color: rgb(235, 235, 235);
+	position: absolute;
+	left: -10%;
+	z-index: -1;
+	margin-top: 30px;
+}
+
+.main .container a {
+	color: rgb(98, 98, 234);
+	padding: 10px 20px;
+	font-family: Antonio;
+	scale: 1.5;
+	border: 1px solid rgb(228, 228, 228);
+	background-color: white;
+	border-radius: 5px;
+}
+
+.main .container a:hover {
+	border: 1px solid rgba(98, 98, 243, 0.626);
+}
+
+.main .container h1 {
+	margin-top: 50px;
+	font-size: 50px;
+}
+
+.main .second-wrapper {
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+/*--------------- login page style ------------*/
+
+
+.loginContainer{
+	font-family: Antonio;
+	position: absolute;
+	transform: translate(90%, 10%);
+	width: 500px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 1px black;
+	color: var(--color);
+	overflow: hidden;
+}
+
+
+.loginContainer .container{
+	position: relative;
+	display: flex;
+	width: 170%;
+	justify-content: space-between;
+}
+  
+  .login-form h2 {
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  .form-group {
+	margin-bottom: 15px;
+  }
+  
+  .form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+  }
+  
+  .form-group input {
+	width: 300px;
+	padding: 10px;
+	background-color: transparent;
+	font-size: 14px;
+  }
+  
+  .login-button {
+	padding: 10px 20px;
+	background-color: var(--color);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  .login-button:hover {
+	background-color: var(--color-dark);
+  }
+
+
+  .register-container {
+	padding: 20px 30px;
+	border-radius: 8px;
+	width: 100%;
+	max-width: 400px;
+	margin-top: 20px;
+  }
+  
+  .register-form h2 {
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  .register-button {
+	padding: 10px 20px;
+	background-color: var(--bg-color);
+	color: var(--color);
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  .register-button:hover {
+	background-color: rgb(218, 218, 197);
+  }
+  
+  .login-form h2{
+	height: 100px;
+  }
+
+  .loginContainer .register-page, .loginContainer .login-page{
+	margin-left: 90px;
+	z-index: 99;
+	border: none;
+	background-color: transparent;
+  }
+
+  .loginContainer .register-page{
+	color: var(--color);
+  }
+  
+  .loginContainer .login-page{
+	color: var(--bg-color);
+  }
+
+
+  .login{
+	padding: 90px;
+	position: relative;
+  }
+
+  .register{
+	color: var(--bg-color);
+	position: relative;
+  }
+
+
+  .login input{
+	color: var(--color);
+	border: none;
+	border-bottom: 1px solid var(--color);
+  }
+
+  .login input:focus{
+	outline: none;
+	border-bottom:1px solid rgb(255, 0, 0);
+  }
+
+  .register input{
+	color: var(--bg-color);
+	border: none;
+	border-bottom: 1px solid var(--bg-color);
+  }
+
+  .register input:focus{
+	outline: none;
+	border-bottom:1px solid rgb(255, 255, 255);
+  }
+
+
+  .register form{
+	background-color: var(--color);
+	padding: 60px 80px;
+	padding-left: 200px;
+  }
+
+  .register::before{
+	content: '';
+	width: 200px;
+	height: 260px;
+	background-color: var(--color);
+	border-radius: 100px 0px 0px 100px ;
+	position: absolute;
+	left: -100px;
+}
+
+
+
+  /*------------ Slide Right ----------*/
+
+
+
+
+  /* Add animation keyframes */
+@keyframes slideInRight {
+	from {
+	  transform: translateX(100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(-16%);
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes slideOutRight {
+	from {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+	to {
+	  transform: translateX(100%);
+	  /* opacity: 0; */
+	}
+  }
+  
+  /* Register sliding in */
+  .register.active {
+	animation: slideInRight 0.5s forwards;
+	display: block;
+  }
+  
+  /* Login sliding out */
+  .login.hidden {
+	animation: slideOutRight 0.5s forwards;
+	display: none;
+  }
+
+  /* Sliding in from the left */
+@keyframes slideInLeft {
+	from {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  
+  /* Sliding out to the left */
+  @keyframes slideOutLeft {
+	from {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+	to {
+	  transform: translateX(-100%);
+	  /* opacity: 0; */
+	}
+  }
+  
+  /* Login sliding in */
+  .login.active {
+	animation: slideInLeft 0.5s forwards;
+	display: block;
+  }
+  
+  /* Register sliding out */
+  .register.hidden {
+	animation: slideOutLeft 0.5s forwards;
+	display: none;
+  }
+  
+  /* ----------- booking style --------------*/
+
+
+
+  
+  .sec-04 .container {
+	max-width: 600px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sec-04 .wrapper-01 {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin: 20px;
+  }
+  
+  .sec-04 h2 {
+	font-size: 1.5rem;
+	color: #333;
+  }
+  
+  .sec-04 select, input[type="file"] {
+	padding: 10px;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  #locationUpload {
+	margin-top: 20px;
+  }
+  
+
+  #map {
+	width: 100%;
+	height: 300px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+  }
+  
+  #locationOutput {
+	font-weight: bold;
+	color: #333;
+  }
+  
+  .sec-04 .wrapper-02 select{
+	width: 100%;
+  }
+
+  .sec-04 .wrapper-02{
+	margin: 20px;
+	gap: 15px;
+  }
+
+  .sec-04 .wrapper-02 h2{
+	margin: 15px;
+  }
+
+  .sec-04 .wrapper-03{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+  }
+
+  .sec-04 button{
+	padding: 10px 20px;
+	background-color: var(--color);
+	color: var(--bg-color);
+	border-radius: 10px;
+	border: 1px solid var(--bg-color);
+  }
+
+  .sec-04 button:hover{
+	background-color: rgb(222, 5, 5);
+  }
+
+.sec-04{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.otherinfo{
+	margin: 20px;
+	font-size: 14px;
+}

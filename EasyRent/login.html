@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- antonio font style -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Faculty+Glyphic&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=League+Gothic&family=Macondo+Swash+Caps&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=The+Nautigal:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: white;  font-family: Antonio;">
+	<nav>
+		<div class="logoContainer ">
+			<div class="logo">
+				<img src="assets/logo.png" alt="logo">
+			</div>
+		</div>
+		<a href="index.html" class="home">
+			GO BACK
+		</a>
+	</nav>
+	<div class="loginContainer">
+		<div class="container loginWrapper">
+				<div class="login">
+					<form class="login-form">
+						<h2>Login</h2>
+						<div class="form-group">
+						  <label for="email">Email</label>
+						  <input type="email" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+						  <label for="password">Password</label>
+						  <input type="password" id="password" name="password" required>
+						</div>
+						<button type="submit" class="login-button">Login</button><button type="button" onclick="registerPage()" class="register-page">Don't have an account ?</button>
+					  </form>
+				</div>
+			<div class="register">
+				<form class="register-form">
+					<h2>Register</h2>
+					<div class="form-group">
+					  <label for="name">Name</label>
+					  <input type="text" id="name" name="name" required>
+					</div>
+					<div class="form-group">
+					  <label for="email">Email</label>
+					  <input type="email" id="email" name="email" required>
+					</div>
+					<div class="form-group">
+					  <label for="password">Password</label>
+					  <input type="password" id="password" name="password" required>
+					</div>
+					<div class="form-group">
+					  <label for="confirm-password">Confirm Password</label>
+					  <input type="password" id="confirm-password" name="confirm-password" required>
+					</div>
+					<button type="submit" class="register-button">Register</button> <button type="button" onclick="loginPage()" class="login-page">Wanna Login ?</button>
+				  </form>
+			</div>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
